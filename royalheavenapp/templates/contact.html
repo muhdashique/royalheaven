@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    body{
+        background-color: #000000;
+    }
+    /* Banner */
+    .banner {
+      width: 100%;
+      height: 800px;
+      background: url('https://images.pexels.com/photos/1118861/pexels-photo-1118861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    /* Contact Container */
+    .contact-container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-form {
+      flex: 1;
+      margin-right: 40px;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact-form textarea {
+      height: 150px;
+    }
+
+    .contact-form button {
+      background-color: #ff5722;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #e64a19;
+    }
+
+    .contact-image {
+      max-width: 400px;
+      height: auto;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Banner Section -->
+  <div class="banner">
+    Contact Us
+  </div>
+
+  <!-- Contact Section -->
+  <div class="contact-container">
+    <div class="contact-form">
+      <h1>Contact Us</h1>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <img class="contact-image" src="https://images.pexels.com/photos/1659435/pexels-photo-1659435.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Contact image">
+  </div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,315 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROYAL HEAVEN</title>
+    <style>
+        Reset default styles
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fffefe;
+        }
+
+        /* Video Banner Container */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Video Styling */
+        .banner-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Overlay */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        /*  */
+
+        /* Banner Text */
+        .banner-text {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            color: white;
+        }
+
+        .banner-text h1 {
+            font-size: 64px;
+            font-weight: 300;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .contact-info {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .banner-text h1 {
+                font-size: 48px;
+            }
+        }
+        /* about */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .hiking-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hiking-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgb(66, 65, 65) 0%, rgba(22, 22, 22, 0.9) 80%, rgba(255, 255, 255, 0) 100%);
+            padding: 40px;
+            min-height: 300px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            width: 100%;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .description {
+            color: #ffffff;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .image-credit {
+            color: #ffffff;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .learn-more-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 2px solid #ffffff;
+            color: #fffbfb;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .learn-more-btn:hover {
+            background-color: #ffffff;
+            color: rgb(20, 20, 20);
+        }
+
+        @media (max-width: 768px) {
+            .content-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .title {
+                font-size: 2rem;
+            }
+
+            .content-overlay {
+                padding: 20px;
+            }
+        }
+        /* room image section */
+        .getaway-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.getaway-container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.getaway-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+
+.getaway-card {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgb(0, 0, 0);
+}
+
+.getaway-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.getaway-card h2 {
+  margin: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.getaway-card p {
+  margin: 0 16px 16px;
+  font-size: 14px;
+  color: #000000;
+}
+    </style>
+</head>
+<body>
+    <div class="banner-container">
+        <!-- Video Background -->
+        <video class="banner-video" autoplay loop muted playsinline>
+            <source src="{% static 'images\WhatsApp Video 2025-01-23 at 11.39.28_bd43c6b3.mp4' %}" type="video/mp4">
+        </video>
+        
+        <!-- Overlay -->
+        <div class="overlay"></div>
+        <!-- Banner Text -->
+        <div class="banner-text">
+            <h1>ROYAL <br> HEAVEN</h1>
+        </div>
+    </div>
+    <section class="hiking-section">
+        <img src="https://images.pexels.com/photos/1786306/pexels-photo-1786306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Hikers on mountain trail" class="hiking-image">
+        <div class="content-overlay">
+            <div class="content-container">
+                <div class="left-content">
+                    <h1 class="title">
+                        ROYAL<br>HEAVEN</h1>
+                </div>
+                <div class="right-content">
+                    <p class="description">Welcome to Royal Heaven, a serene homestay nestled in the heart of Wayanad, where nature's beauty meets warm hospitality. Surrounded by lush greenery and a tranquil atmosphere, Royal Heaven offers the perfect getaway for those seeking peace and relaxation.
+
+                        Whether you’re here to enjoy the misty mornings, explore the enchanting landscapes, or simply unwind in the lap of nature, Royal Heaven promises a memorable and rejuvenating experience.
+                        
+                        Come, make yourself at home in the beauty of Wayanad!</p>
+                    <a href="{% url 'about' %}" class="learn-more-btn">LEARN MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="getaway-container">
+            <h1>Find your next getaway</h1>
+            <div class="getaway-grid">
+              <div class="getaway-card">
+                <img src="https://www.visittobengal.com/blog/wp-content/uploads/HS2-1024x537.jpg" alt="Camping near hot springs">
+                <h2>Natural Ambience</h2>
+                <p>Take a dip</p>
+              </div>
+              <div class="getaway-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQto29XMmhJUCsKTQfufVJtCu51KgWteLDbyQ&s" alt="Grand Canyon">
+                <h2>Homely Atmosphere</h2>
+                <p>Arizona</p>
+              </div>
+              <div class="getaway-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpaoYFyq9KETTMmhYg7kWg_l8zHGB6h2JasA&s" alt="Yosemite">
+                <h2></h2>
+                <p>California</p>
+              </div>
+              <div class="getaway-card">
+                <img src="https://media1.thrillophilia.com/filestore/9pjcq05cy9ztm6rip3stke7km4x8_adithya-nature-resort%20(5).jpg?w=753&h=450&dpr=2.0" alt="Berg Lake Trail">
+                <h2>Berg Lake Trail</h2>
+                <p>Canada</p>
+              </div>
+              <div class="getaway-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-kE2Up6J9tDH7ZZXnVAFUT6obCmf5w6jzMQ&s" alt="Beach stays">
+                <h2>Beach stays</h2>
+                <p>See up by the water</p>
+              </div>
+              <div class="getaway-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLKrhZ8zXAI-WgXgCcKBGfCOiSCmh6u-d18Z9_DY62_qwAPLuDYCcCvWzqRs2svhfPf4o&usqp=CAU" alt="Lake camping">
+                <h2>Lake camping</h2>
+                <p>Cozy up by the lakes</p>
+              </div>
+              <div class="getaway-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQafXi-C9FouKJcYpRoGNPSEi7XK5I0J_4jNA&s" alt="Yellowstone">
+                <h2>Yellowstone</h2>
+                <p>Wyoming</p>
+              </div>
+              <div class="getaway-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8PYlvnwJ_6Zc1ckpnljlxT8fMA48L8btnPQ0k-dSPTVkFRoCWRsxhbnRc6-p-en0NnPs&usqp=CAU" alt="Bryce Canyon">
+                <h2>Bryce Canyon</h2>
+                <p>Utah</p>
+              </div>
+              <div class="getaway-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd5MUqHRwwOk6Y8eG9Na7Cd0CQtNez6U6xNQ&s" alt="Redwoods">
+                <h2>Redwoods</h2>
+                <p>California</p>
+              </div>
+            </div>
+          </div>
+    </section>
+</body>
+</html>
+{% endblock %}
