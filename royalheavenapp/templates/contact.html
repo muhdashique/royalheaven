@@ -9,21 +9,89 @@
   <title>Contact Us</title>
   <style>
     body{
-        background-color: #000000;
-    }
-    /* Banner */
-    .banner {
-      width: 100%;
-      height: 800px;
-      background: url('https://images.pexels.com/photos/1118861/pexels-photo-1118861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-      font-size: 36px;
-      font-weight: bold;
-    }
+            background-color: #f5f5f5;
+        }
+        .journey-section {
+  background-color: #f5f5f5;
+  padding: 80px 0;
+}
+
+.journey-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.journey-image {
+  flex: 0 0 60%;
+  padding-right: 40px;
+}
+
+.journey-image img {
+  width: 100%;
+  height: 90vh;
+  border-radius: 8px;
+}
+
+.journey-text {
+  flex: 0 0 40%;
+}
+
+.journey-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.journey-text p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .journey-content {
+    flex-direction: column;
+  }
+
+  .journey-image {
+    flex: 0 0 100%;
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .journey-text {
+    flex: 0 0 100%;
+    text-align: center;
+  }
+}
+.unique-journey {
+  background: url('https://images.pexels.com/photos/27111966/pexels-photo-27111966/free-photo-of-large-mountain-range-landscape.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center/cover;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(255, 254, 254);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.unique-journey .content {
+  max-width: 400px;
+ 
+}
+
+.unique-journey h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.unique-journey p {
+  font-size: 16px;
+}
 
     /* Contact Container */
     .contact-container {
@@ -80,10 +148,11 @@
 </head>
 <body>
 
-  <!-- Banner Section -->
-  <div class="banner">
-    Contact Us
-  </div>
+    <section class="unique-journey">
+        <div class="content" style="margin-right: 1000px; margin-top: 450px;">
+          <h2>ROYAL<br>HEAVEN</h2> 
+        </div>
+    </section>
 
   <!-- Contact Section -->
   <div class="contact-container">

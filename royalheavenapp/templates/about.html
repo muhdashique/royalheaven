@@ -11,7 +11,7 @@
     <title>Document</title>
     <style>
         body{
-            background-color: #f5f5f5;
+            background-color: #fff9f9;
         }
         .journey-section {
   background-color: #f5f5f5;
@@ -82,6 +82,7 @@
 
 .unique-journey .content {
   max-width: 400px;
+  font-size: xx-large;
  
 }
 
@@ -94,16 +95,49 @@
 .unique-journey p {
   font-size: 16px;
 }
+/* video */
+.video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+        .video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
+  video {
+    width: 100%;
+    height: auto;
+  }
 
     </style>
 </head>
 <body>
     <section class="unique-journey">
-        <div class="content" style="margin-left: 200px;">
-          <h2>A UNIQUE JOURNEY DESIGNED JUST FOR YOU</h2>
-         
+        <div class="content" style="margin-right: 1000px; margin-top: 450px; font-size: xx-large;">
+          <h2 style="font-weight: 900;">ROYAL<br>HEAVEN</h2> 
         </div>
-      </section>
+    </section>
+
+
+
+
+    <section class="video-container">
+        <h2>Video Title</h2>
+        <video controls>
+            <source src="{% static 'images\I MINUTS NEW.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>Video description or additional information</p>
+    </section>
+
       
 </body>
 </html>
