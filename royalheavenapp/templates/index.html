@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROYAL HEAVEN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         Reset default styles
         * {
@@ -19,7 +20,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #000000;
+            background-color: black;
         }
 
         /* Video Banner Container */
@@ -57,7 +58,7 @@
             position: absolute;
             bottom: 40px;
             left: 40px;
-            color: white;
+            color: #e5ba37;
         }
 
         .banner-text h1 {
@@ -110,7 +111,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgb(66, 65, 65) 0%, rgba(22, 22, 22, 0.9) 80%, rgba(255, 255, 255, 0) 100%);
+            background: linear-gradient(to top, rgb(42, 42, 42) 0%, rgba(37, 36, 36, 0.9) 80%, rgba(38, 37, 37, 0) 100%);
             padding: 40px;
             min-height: 300px;
             display: flex;
@@ -129,20 +130,20 @@
         .title {
             font-size: 2.5rem;
             font-weight: bold;
-            color: #ffffff;
+            color: #e5ba37;
             margin-bottom: 20px;
             line-height: 1.2;
         }
 
         .description {
-            color: #ffffff;
+            color: #e5ba37;
             line-height: 1.6;
             margin-bottom: 20px;
             font-size: 1.1rem;
         }
 
         .image-credit {
-            color: #ffffff;
+            color: #e5ba37;
             font-size: 0.9rem;
             margin-bottom: 20px;
         }
@@ -150,8 +151,8 @@
         .learn-more-btn {
             display: inline-block;
             padding: 12px 30px;
-            border: 2px solid #ffffff;
-            color: #fffbfb;
+            border: 2px solid #e5ba37;
+            color: #e5ba37;
             text-decoration: none;
             border-radius: 25px;
             font-weight: 500;
@@ -159,7 +160,7 @@
         }
 
         .learn-more-btn:hover {
-            background-color: #ffffff;
+            background-color: #e5ba37;;
             color: rgb(20, 20, 20);
         }
 
@@ -189,7 +190,7 @@
   margin-bottom: 40px;
   font-size: 32px;
   font-weight: bold;
-  color: #ffffff;
+  color: #e5ba37;
 }
 
 .getaway-grid {
@@ -214,39 +215,504 @@
   margin: 16px;
   font-size: 18px;
   font-weight: bold;
-  color: #ffffff;
+  color: #e5ba37;
 }
 
 .getaway-card p {
   margin: 0 16px 16px;
   font-size: 14px;
-  color: #ffffff;
+  color: #e5ba37;
 }
+/* mobile view */
+/* Additional Mobile-First Responsive Styles */
+@media screen and (max-width: 480px) {
+    /* Banner Text Adjustments */
+    .banner-text {
+        left: 20px;
+        bottom: 20px;
+    }
+    
+    .banner-text h1 {
+        font-size: 36px;
+    }
+    
+    /* Hiking Section Adjustments */
+    .hiking-section {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .content-overlay {
+        padding: 20px;
+        min-height: auto;
+    }
+    
+    .content-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .description {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    
+    .learn-more-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    /* Getaway Section Adjustments */
+    .getaway-container {
+        padding: 20px 10px;
+    }
+    
+    .getaway-container h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .getaway-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+    
+    .getaway-card {
+        margin-bottom: 15px;
+    }
+    
+    .getaway-card img {
+        height: 180px;
+    }
+    
+    .getaway-card h2 {
+        font-size: 16px;
+        margin: 12px;
+    }
+    
+    .getaway-card p {
+        margin: 0 12px 12px;
+        font-size: 13px;
+    }
+}
+
+/* Tablet Adjustments */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .getaway-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    
+    .banner-text h1 {
+        font-size: 42px;
+    }
+}
+
+/* Ensure videos and images are responsive */
+@media screen and (max-width: 768px) {
+    .banner-video,
+    .hiking-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Landscape Mode Optimization */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+    .banner-container,
+    .hiking-section {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .content-overlay {
+        position: relative;
+        background: rgb(66, 65, 65);
+    }
+}
+/* destinations */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 400px 250px;
+    gap: 20px;
+  }
+  
+  .bottom-row {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .destination {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .destination img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .destination:hover img {
+    transform: scale(1.05);
+  }
+  
+  .destination h2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+    
+    .bottom-row {
+      grid-template-columns: 1fr;
+    }
+    
+    .destination {
+      height: 300px;
+    }
+  }
+  .testimonials-section {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  .section-title {
+    color: #ffd700;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .section-subtitle {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ffffff;
+  }
+
+  .underline {
+    width: 60px;
+    height: 3px;
+    background-color: #ffd700;
+    margin: 20px auto 50px;
+  }
+
+  .testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .testimonial-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  .testimonial-text {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    position: relative;
+    border: 1px solid #333;
+  }
+
+  .testimonial-text::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #2a2a2a;
+    transform: rotate(45deg);
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+  }
+
+  .profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+    border: 3px solid #ffd700;
+  }
+
+  .profile-name {
+    margin: 15px 0 5px;
+    font-size: 20px;
+    color: white;
+  }
+
+  .profile-title {
+    color: #ffd700;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .testimonial-card {
+      flex: 0 0 100%;
+      margin-bottom: 30px;
+    }
+  }
+  /* aminities */
+  .fitness-section {
+    background-color: #000000;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+/* Image Grid Styles */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem;
+    text-align: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.card-label p {
+    margin: 0;
+    color: #1F2937;
+    font-weight: 500;
+}
+
+.wellness-card {
+    grid-column: span 2;
+}
+
+/* Content Styles */
+.content {
+    color: white;
+    padding: 1rem;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.content-section {
+    margin-bottom: 2rem;
+}
+
+.content-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.content-section p {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .fitness-section {
+        padding: 2rem 1rem;
+    }
+    
+    .content {
+        padding: 0;
+    }
+}
+/*  */
+.gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 300px;
+            gap: 20px;
+            grid-auto-flow: dense;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Make certain items span 2 rows or columns for variety */
+        .gallery-item.featured-vertical {
+            grid-row: span 2;
+        }
+
+        .gallery-item.featured-horizontal {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                grid-auto-rows: 250px;
+            }
+        }
+        .fitness-section {
+    padding: 20px;
+}
+
+.grid-container {
+    display: flex;
+    justify-content: space-between; /* Distribute evenly */
+    gap: 20px;
+}
+
+.content {
+    width: 48%; /* Each box will take 48% width */
+}
+
+.content-section {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-top: 0;
+    color: #ffd700;
+}
+
+p {
+    color: #ffd700;
+}
+
+
     </style>
 </head>
 <body>
     <div class="banner-container">
         <!-- Video Background -->
         <video class="banner-video" autoplay loop muted playsinline>
-            <source src="{% static 'images\WhatsApp Video 2025-01-23 at 11.39.28_bd43c6b3.mp4' %}" type="video/mp4">
+            <source src="{% static 'D:\IMC project\Royal Heaven\royalheaven\static\images\royalbanner.mp4' %}" type="video/mp4">
         </video>
         
         <!-- Overlay -->
         <div class="overlay"></div>
         <!-- Banner Text -->
-        <div class="banner-text">
+        <!-- <div class="banner-text">
             <h1>ROYAL <br> HEAVEN</h1>
-        </div>
+        </div> -->
     </div>
     <section class="hiking-section">
-        <img src="https://images.pexels.com/photos/1786306/pexels-photo-1786306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Hikers on mountain trail" class="hiking-image">
+        <img src="{% static 'D:\IMC project\Royal Heaven\royalheaven\static\images\photorealistic-wooden-house-with-timber-structure.jpg' %}" alt="Hikers on mountain trail" class="hiking-image">
         <div class="content-overlay">
             <div class="content-container">
                 <div class="left-content">
-                    <h1 class="title">
+                    <h1 class="title" style="margin-top: 40px;">
                         ROYAL<br>HEAVEN</h1>
                 </div>
-                <div class="right-content">
+                <div class="right-content" style="margin-top: 40px;">
                     <p class="description">Welcome to Royal Heaven, a serene homestay nestled in the heart of Wayanad, where nature's beauty meets warm hospitality. Surrounded by lush greenery and a tranquil atmosphere, Royal Heaven offers the perfect getaway for those seeking peace and relaxation.
 
                         Whether you’re here to enjoy the misty mornings, explore the enchanting landscapes, or simply unwind in the lap of nature, Royal Heaven promises a memorable and rejuvenating experience.
@@ -259,57 +725,285 @@
     </section>
 
     <section>
-        <div class="getaway-container">
-            <h1>Find your next getaway</h1>
-            <div class="getaway-grid">
-              <div class="getaway-card">
-                <img src="https://www.visittobengal.com/blog/wp-content/uploads/HS2-1024x537.jpg" alt="Camping near hot springs">
-                <h2>Natural Ambience</h2>
-                <p>Take a dip</p>
-              </div>
-              <div class="getaway-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQto29XMmhJUCsKTQfufVJtCu51KgWteLDbyQ&s" alt="Grand Canyon">
-                <h2>Homely Atmosphere</h2>
-                <p>Arizona</p>
-              </div>
-              <div class="getaway-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpaoYFyq9KETTMmhYg7kWg_l8zHGB6h2JasA&s" alt="Yosemite">
-                <h2></h2>
-                <p>California</p>
-              </div>
-              <div class="getaway-card">
-                <img src="https://media1.thrillophilia.com/filestore/9pjcq05cy9ztm6rip3stke7km4x8_adithya-nature-resort%20(5).jpg?w=753&h=450&dpr=2.0" alt="Berg Lake Trail">
-                <h2>Berg Lake Trail</h2>
-                <p>Canada</p>
-              </div>
-              <div class="getaway-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-kE2Up6J9tDH7ZZXnVAFUT6obCmf5w6jzMQ&s" alt="Beach stays">
-                <h2>Beach stays</h2>
-                <p>See up by the water</p>
-              </div>
-              <div class="getaway-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLKrhZ8zXAI-WgXgCcKBGfCOiSCmh6u-d18Z9_DY62_qwAPLuDYCcCvWzqRs2svhfPf4o&usqp=CAU" alt="Lake camping">
-                <h2>Lake camping</h2>
-                <p>Cozy up by the lakes</p>
-              </div>
-              <div class="getaway-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQafXi-C9FouKJcYpRoGNPSEi7XK5I0J_4jNA&s" alt="Yellowstone">
-                <h2>Yellowstone</h2>
-                <p>Wyoming</p>
-              </div>
-              <div class="getaway-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8PYlvnwJ_6Zc1ckpnljlxT8fMA48L8btnPQ0k-dSPTVkFRoCWRsxhbnRc6-p-en0NnPs&usqp=CAU" alt="Bryce Canyon">
-                <h2>Bryce Canyon</h2>
-                <p>Utah</p>
-              </div>
-              <div class="getaway-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd5MUqHRwwOk6Y8eG9Na7Cd0CQtNez6U6xNQ&s" alt="Redwoods">
-                <h2>Redwoods</h2>
-                <p>California</p>
-              </div>
+        <div class="gallery-container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="{% static 'images/IMG_1961.JPG' %}" alt="Photographer with camera in low light" />
+                </div>
+                <div class="gallery-item featured-vertical">
+                    <img src="{% static 'images/IMG_1961.JPG' %}" alt="Photographer portrait" />
+                </div>
+                <div class="gallery-item">
+                    <img src="{% static 'images/pool.png' %}" alt="Sunset silhouette" />
+                </div>
+                <div class="gallery-item">
+                    <img src="{% static 'images/out.png' %}" alt="Photographer on rock" />
+                </div>
+                <div class="gallery-item featured-horizontal">
+                    <img src="{% static 'D:\IMC project\Royal Heaven\royalheaven\static\images\Screenshot 2025-01-25 at 9.20.28 PM.png' %}" alt="Camera close-up" />
+                </div>
+                <div class="gallery-item">
+                    <img src="{% static 'images/out.png' %}" alt="Street photographer" />
+                </div>
+                <div class="gallery-item">
+                    <img src="{% static 'images/poolside.jpg' %}" alt="Silhouette at sunset" />
+                </div>
             </div>
-          </div>
+        </div>
     </section>
-</body>
+
+
+    <section class="fitness-section">
+        <div class="container">
+            <div class="">
+    
+                <!-- Content -->
+                <div class="">
+                    <h2>Premium Amenities for Your Comfort</h2>
+    
+                    <div style="display: flex; gap: 40px;"> <!-- Add gap between boxes -->
+                        <div class="content-section" style="width: 50%;">
+                            <h3>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun">
+                                    <circle cx="12" cy="12" r="5"></circle>
+                                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                                </svg> AC and Non-AC Rooms
+                            </h3>
+                            <p>Choose from our comfortable AC and Non-AC rooms, designed to suit every preference and budget</p>
+                        </div>
+                        
+    
+                        <div class="content-section" style="width: 50%;">
+                            <h3>
+                                <!-- Hot Water SVG Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-droplet">
+                                    <path d="M12 2C8.134 2 5 6.3 5 10c0 3.49 3.134 7 7 7s7-3.51 7-7c0-3.7-3.134-8-7-8z"></path>
+                                    <path d="M12 15v3m-4 0v-3m8 0v3"></path>
+                                </svg> Hot Water Available
+                            </h3>
+                            <p>Enjoy the convenience of 24/7 hot water in all our rooms, ensuring a relaxing and comfortable stay</p>
+                        </div>
+                        
+                    </div>
+    
+                    <div style="display: flex; gap: 40px;"> <!-- Add gap between boxes -->
+                        <div class="content-section" style="width: 50%;">
+                            <h3>
+                                <!-- Wi-Fi SVG Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-wifi">
+                                    <path d="M12 18c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"></path>
+                                    <path d="M12 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path>
+                                    <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z"></path>
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
+                                </svg> 24/7 Wifi Available
+                            </h3>
+                            <p>Stay connected with complimentary high-speed Wi-Fi available throughout your stay</p>
+                        </div>
+                        
+    
+                        <div class="content-section" style="width: 50%;">
+                            <h3>
+                                <!-- Dining SVG Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-restaurant">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 2v6"></path>
+                                    <path d="M8 10l4 4 4-4"></path>
+                                    <path d="M12 14v8"></path>
+                                </svg> Delightful Dining Experience
+                            </h3>
+                            <p>Relax and indulge in delicious meals at our cozy and well-appointed dining area</p>
+                        </div>
+                        
+                    </div>
+    
+                    <div style="display: flex; gap: 40px;"> <!-- Add gap between boxes -->
+                        <div class="content-section" style="width: 50%;">
+                            <h3>
+                                <!-- Easy Access SVG Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-door-open">
+                                    <path d="M12 1v22"></path>
+                                    <path d="M17 6h4v12h-4z"></path>
+                                    <path d="M7 6H3v12h4z"></path>
+                                </svg> Enjoy Easy Access
+                            </h3>
+                            <p>Experience seamless convenience with easy access to all amenities, ensuring a hassle-free stay</p>
+                        </div>
+                        
+    
+                        <div class="content-section" style="width: 50%;">
+                            <h3>
+                                <!-- Pickup and Drop Services SVG Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-car">
+                                    <path d="M3 12l3 4h12l3-4"></path>
+                                    <path d="M5 12l3-4h8l3 4"></path>
+                                    <path d="M2 16h20"></path>
+                                    <circle cx="7" cy="18" r="2"></circle>
+                                    <circle cx="17" cy="18" r="2"></circle>
+                                </svg> Effortless Pickup and Drop Services
+                            </h3>
+                            <p>Enjoy hassle-free travel with our reliable pickup and drop services, ensuring a smooth and convenient experience throughout your stay</p>
+                        </div>
+                        
+                    </div>
+                    <div style="display: flex; gap: 40px;"> <!-- Add gap between boxes -->
+                        <div class="content-section" style="width: 50%;">
+                            <h3>
+                                <!-- Swimming Pool SVG Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pool">
+                                    <path d="M2 15V5h20v10H2z"></path>
+                                    <path d="M2 9h20"></path>
+                                    <path d="M6 15h12"></path>
+                                </svg> Private Swimming Pool
+                            </h3>
+                            <p>Relax and unwind in our luxurious swimming pool, offering a refreshing experience for guests of all ages</p>
+                        </div>
+                        
+    
+                        <div class="content-section" style="width: 50%;">
+                            <h3>
+                                <!-- Campfire SVG Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-campfire">
+                                    <path d="M12 2C9.8 2 8 3.8 8 6C8 7.3 8.5 8.5 9.4 9.2L9 16L5 19L6 22H18L19 19L15 16L14.6 9.2C15.5 8.5 16 7.3 16 6C16 3.8 14.2 2 12 2ZM10 6C10 5.4 10.4 5 11 5C11.6 5 12 5.4 12 6C12 6.6 11.6 7 11 7C10.4 7 10 6.6 10 6ZM14 6C14 5.4 14.4 5 15 5C15.6 5 16 5.4 16 6C16 6.6 15.6 7 15 7C14.4 7 14 6.6 14 6ZM12 8.6C11.2 8.6 10.5 9.3 10.5 10C10.5 10.7 11.2 11.4 12 11.4C12.8 11.4 13.5 10.7 13.5 10C13.5 9.3 12.8 8.6 12 8.6ZM8 10.8C7.3 10.8 6.7 11.4 6.7 12.1C6.7 12.8 7.3 13.4 8 13.4C8.7 13.4 9.3 12.8 9.3 12.1C9.3 11.4 8.7 10.8 8 10.8ZM16 10.8C15.3 10.8 14.7 11.4 14.7 12.1C14.7 12.8 15.3 13.4 16 13.4C16.7 13.4 17.3 12.8 17.3 12.1C17.3 11.4 16.7 10.8 16 10.8Z"></path>
+                                </svg> Campfire
+                            </h3>
+                            <p>Gather around our cozy campfire, enjoy the warmth, and share stories under the stars, creating unforgettable memories</p>
+                        </div>
+                        
+                    </div>
+                    <div style="display: flex; gap: 40px;"> <!-- Add gap between boxes -->
+                        <div class="content-section" style="width: 50%;">
+                            <h3>
+                                <!-- Eco Friendly SVG Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-leaf">
+                                    <path d="M9 2C8.7 2 8.4 2.1 8.2 2.3L5.3 5.2C4.5 6 4.5 7.3 5.3 8.1C6.1 8.9 7.4 8.9 8.2 8.1L13.7 2.6C14.5 1.8 15.8 1.8 16.6 2.6L17.4 3.4C18.2 4.2 18.2 5.5 17.4 6.3L12.5 11.2C12.3 11.4 12.1 11.4 11.9 11.4C11.7 11.4 11.5 11.3 11.3 11.1L8.4 8.2C7.6 7.4 7.6 6.1 8.4 5.3L9.5 4.2C9.7 4 10 3.8 10.2 3.8C10.4 3.8 10.7 3.9 10.9 4.1L13.8 6.6C14.6 7.4 14.6 8.7 13.8 9.5L10.9 11.9L9.5 10.4L11.2 8.6C11.4 8.4 11.7 8.4 11.9 8.6L13.5 10.2C14.3 11 14.3 12.3 13.5 13.1L8.6 18.1C7.8 18.9 6.5 18.9 5.7 18.1L4.9 17.3C4.1 16.5 4.1 15.2 4.9 14.4L9.8 9.5C10 9.3 10.2 9.3 10.4 9.3C10.6 9.3 10.8 9.4 11 9.6L13.9 12.1C14.7 12.9 14.7 14.2 13.9 15L11.4 17.9C10.6 18.7 9.3 18.7 8.5 17.9L7.7 17.1C7 16.3 7 15 7.7 14.2L11.1 10.6L9 8.6C8.7 8.4 8.4 8.4 8.2 8.6L8 8.8C7.8 9 7.7 9.2 7.7 9.4L7.3 11.2C7.2 11.4 7.2 11.6 7.3 11.8L8.4 13C9.2 13.8 10.5 13.8 11.3 13C11.5 12.8 11.5 12.5 11.3 12.3L9.5 10.5C9.3 10.3 9.1 10.3 8.9 10.5L8.7 10.7L9 11.1L8.7 10.9C9 11.3 9 11.4 9 11.5L9 12L10.1 13.1L9.9 13.3C9.7 13.5 9.4 13.5 9.2 13.3L8.6 12.7C8.4 12.5 8.3 12.3 8.2 12.1L7.9 11.8C7.7 11.6 7.4 11.4 7.2 11.4C7 11.4 6.7 11.4 6.5 11.6C6.3 11.8 6.3 12.1 6.5 12.3C7.3 13.1 8.6 13.1 9.4 12.3L10.1 11.6C10.3 11.4 10.6 11.4 10.8 11.6L12.6 13.4C13.4 14.2 13.4 15.5 12.6 16.3L11.2 17.7L10.4 17.1L9.7 16.4L10.9 15.3C11.1 15.1 11.4 15.1 11.6 15.3L13.4 17.1C14.2 17.9 14.2 19.2 13.4 20L12 21L10.6 19.5L11.2 18.2L12 17L10.6 15.5L12.4 13.7L13.4 14.7L14.6 13.5C15.4 12.7 15.4 11.4 14.6 10.6L12.8 8.8C12.6 8.6 12.4 8.6 12.2 8.8L12 9C12.2 8.8 12.4 8.8 12.6 9L13.5 10.6L15 9C14.8 8.8 14.6 8.6 14.4 8.4L13.5 7.7C13.3 7.5 13.1 7.3 13 7.1L14 6.1L15 5.2L15.5 5.5C15.7 5.8 15.7 6.1 15.4 6.3C15.2 6.5 15 6.7 14.8 6.7L14.3 6.5C14.1 6.3 13.9 6.1 13.7 5.9L12.9 5.6L12 5.3L12 5.1L12.1 5C12.3 4.8 12.5 4.7 12.7 4.7C12.9 4.7 13.1 4.9 13.1 5.1L13 5.3Z"></path>
+                                </svg> Eco Friendly
+                            </h3>
+                            <p>Reconnect with nature in our calm, serene surroundings, promoting sustainability and environmental harmony.</p>
+                        </div>
+                        
+    
+                        <div class="content-section" style="width: 50%;">
+                            <h3>
+                                <!-- Room Service SVG Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-truck">
+                                    <path d="M17 6H3V18H17V6Z"></path>
+                                    <path d="M10 2H14V6H10V2Z"></path>
+                                    <path d="M21 15H17L16 12H5L4 15H1"></path>
+                                    <path d="M17 18L15 21H5L3 18"></path>
+                                    <path d="M12 13H12.01"></path>
+                                </svg>
+                                Room Service
+                            </h3>
+                            <p>Enjoy hassle-free travel with our reliable pickup and drop services, ensuring a smooth and convenient experience throughout your stay.</p>
+                        </div>
+                        
+                    </div>
+                    <div style="display: flex; gap: 40px;"> <!-- Add gap between boxes -->
+                        <div class="content-section" style="width: 50%;">
+                            <h3>
+                                <!-- Indoor Games SVG Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-gamepad">
+                                    <path d="M7 8V2h10v6h-2V4H9v4H7zm10 10V8h-2v8H9V8H7v10h10z"></path>
+                                </svg> Indoor Games
+                            </h3>
+                            <p>Enjoy a wide variety of indoor games in our entertainment zone, from table tennis to board games, perfect for family fun and relaxation.</p>
+                        </div>
+                        
+                        
+    
+                        <div class="content-section" style="width: 50%;">
+                            <h3>
+                                <!-- Kids Playing Area SVG Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-playground">
+                                    <path d="M12 2L14 8H10L12 2ZM6 10V18H18V10H6ZM4 18H20V20H4V18Z"></path>
+                                </svg> Kids Playing Area
+                            </h3>
+                            <p>Let your children have endless fun in our spacious and safe kids' play area, featuring slides, swings, and lots of room to play!</p>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+
+
+    <section>
+        <div class="container">
+            <h1 style="color: #e5ba37; margin-bottom: 20px ; font-weight: bold;">Your Ideal Destination Awaits</h1> <!-- Heading added here -->
+            <div class="grid">
+                <div class="destination">
+                    <img src="https://www.keralahydeltourism.com/images/news/banasura-sagar.jpg" alt="Wayanad" />
+                    <h2>Banasura Sagar Dam</h2>
+                </div>
+                <div class="destination">
+                    <img src="https://flycnn.com/wp-content/uploads/2024/05/karapuzha-dam-adventure-zone.png" alt="Munnar" />
+                    <h2>Karappuza Dam</h2>
+                </div>
+                <div class="bottom-row">
+                    <div class="destination">
+                        <img src="https://avathioutdoors.gumlet.io/travelGuide/dev/muthanga-wildlife-sanctuary83345.jpg?format=webp&w=800&dpr=1" alt="Vagamon" />
+                        <h2>Muthanga Wildlife Sanctuary</h2>
+                    </div>
+                    <div class="destination">
+                        <img src="https://lh4.googleusercontent.com/proxy/jvwq2jJFQMo2cjl_pTATBHP7suVwSD0iJ2bc59Xmd2uFX5Hcc9XNiqUo2AA1Qmwogg2rAPdyUNCfFOCkPHz61WGl1Wy-Psl_OUlVVRxzVjauPzA" alt="Goa" />
+                        <h2>Pookode Lake</h2>
+                    </div>
+                    <div class="destination">
+                        <img src="https://www.greengateshotel.com/images/kuruva-island.jpg" alt="Mysore" />
+                        <h2>Kuruvadweep</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="testimonials-section">
+        <h3 class="section-title"></h3>
+        <h2 class="section-subtitle">WHAT THEY SAY ABOUT US</h2>
+        <div class="underline"></div>
+        
+        <div class="testimonials-container">
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida cursus eleifend. Nullam ornare sapien.
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM88oGZ1xcAoEmTLvWyrpb81xhFy1YWBAgYH1ufoAQsamx-m9tGfVZeTy3-MxpnZGb9Oc&usqp=CAU" alt="Mike Angels" class="profile-img">
+            <h3 class="profile-name">MIKE ANGELS</h3>
+            <!-- <p class="profile-title">Architect</p> -->
+          </div>
+    
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida cursus eleifend. Nullam ornare sapien.
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHDRlp-KGr_M94k_oor4Odjn2UzbAS7n1YoA&s" alt="Carl Oswal" class="profile-img">
+            <h3 class="profile-name">CARL OSWAL</h3>
+            <!-- <p class="profile-title">Builder</p> -->
+          </div>
+    
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida cursus eleifend. Nullam ornare sapien.
+            </div>
+            <img src="data:image/jpeg;base64,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" alt="Mark Smith" class="profile-img">
+            <h3 class="profile-name">Dua Lipa</h3>
+            <!-- <p class="profile-title">Constructor</p> -->
+          </div>
+        </div>
+      </section>
+
 </html>
 {% endblock %}

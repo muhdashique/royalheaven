@@ -37,7 +37,7 @@
 
         /* Logo */
         .logo {
-            color: white;
+            color: #e5ba37;
             text-decoration: none;
             font-size: 24px;
             font-weight: 300;
@@ -51,7 +51,7 @@
         }
 
         .nav-links a {
-            color: white;
+            color: #e5ba37;
             text-decoration: none;
             font-size: 16px;
             transition: opacity 0.3s ease;
@@ -69,7 +69,7 @@
         }
 
         .contact-info a {
-            color: white;
+            color: #e5ba37;
             text-decoration: none;
             font-size: 14px;
             display: flex;
@@ -117,7 +117,7 @@ ul{
 }
 .footer-col h4{
   font-size: 18px;
-  color: #ffffff;
+  color: #e5ba37;
   text-transform: capitalize;
   margin-bottom: 35px;
   font-weight: 500;
@@ -139,7 +139,7 @@ ul{
 .footer-col ul li a{
   font-size: 16px;
   text-transform: capitalize;
-  color: #ffffff;
+  color: #e5ba37;
   text-decoration: none;
   font-weight: 300;
   color: #bbbbbb;
@@ -147,7 +147,7 @@ ul{
   transition: all 0.3s ease;
 }
 .footer-col ul li a:hover{
-  color: #ffffff;
+  color: #e5ba37;
   padding-left: 8px;
 }
 .footer-col .social-links a{
@@ -159,12 +159,12 @@ ul{
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
-  color: #ffffff;
+  color: #e5ba37;
   transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover{
   color: #24262b;
-  background-color: #ffffff;
+  background-color: #e5ba37;
 }
 
 /*responsive*/
@@ -188,8 +188,8 @@ ul{
 
 .nav-links a.active {
     font-weight: bold;
-    color: #000000;
-    border-bottom: 2px solid #000000; /* Optional: Underline the active link */
+    color: #e5ba37;
+    border-bottom: 2px solid #e5ba37; /* Optional: Underline the active link */
 }
 .logo img {
     height: 90px; /* Adjust this value to set the desired height */
@@ -199,7 +199,7 @@ ul{
 /* footer */
 .footer {
         background:black;
-        color: #fff;
+        color: #e5ba37;
         padding: 60px 0;
       }
       
@@ -242,7 +242,7 @@ ul{
       .footer-col ul li a {
         font-size: 16px;
         text-decoration: none;
-        color: #bbbbbb;
+        color: #e5ba37;
         display: block;
         transition: all 0.3s ease;
       }
@@ -256,18 +256,18 @@ ul{
         display: inline-block;
         height: 40px;
         width: 40px;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: #e5ba37;
         margin: 0 10px 10px 0;
         text-align: center;
         line-height: 40px;
         border-radius: 50%;
-        color: #ffffff;
+        color: #e5ba37;
         transition: all 0.5s ease;
       }
       
       .social-links a:hover {
         color: #24262b;
-        background-color: #ffffff;
+        background-color: #e5ba37;
       }
 /* whatapp floting button */
 .floating-button_whatapp {
@@ -354,7 +354,7 @@ ul{
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: #e5ba37;;
     padding: 20px;
     border-radius: 8px;
     width: 400px;
@@ -404,6 +404,245 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+/* mobile menu */
+/* Mobile Menu Styles */
+.mobile-menu-wrapper {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-menu-wrapper {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+        z-index: 2000;
+    }
+
+    .menu-icon,
+    .menu-icon:before,
+    .menu-icon:after {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: #e5ba37;
+        position: absolute;
+        left: 13px;
+        transition: all 0.3s ease;
+    }
+
+    .menu-icon {
+        top: 24px;
+    }
+
+    .menu-icon:before {
+        top: -8px;
+    }
+
+    .menu-icon:after {
+        bottom: -8px;
+    }
+
+    .menu-toggle:checked ~ .menu-button .menu-icon {
+        background: transparent;
+    }
+
+    .menu-toggle:checked ~ .menu-button .menu-icon:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .menu-toggle:checked ~ .menu-button .menu-icon:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease;
+        z-index: 1500;
+    }
+
+    .menu-toggle:checked ~ .mobile-menu {
+        right: 0;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-menu li {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .mobile-menu a {
+        color: #e5ba37;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 500;
+        display: block;
+        padding: 10px;
+        transition: color 0.3s ease;
+    }
+
+    .mobile-menu a:hover {
+        color: white;
+    }
+}
+/*  */
+/* Hide mobile menu by default */
+.mobile-menu-wrapper {
+    display: none;
+}
+
+/* General responsive adjustments */
+@media screen and (max-width: 768px) {
+    /* Hide regular nav elements */
+    .nav-links, .contact-info {
+        display: none;
+    }
+    
+    /* Show mobile menu */
+    .mobile-menu-wrapper {
+        display: block;
+    }
+    
+    /* Adjust logo size for mobile */
+    .logo img {
+        height: 60px;
+    }
+    
+    /* Adjust nav container padding */
+    .nav-container {
+        padding: 10px 20px;
+    }
+    
+    /* Footer adjustments */
+    .footer-col {
+        width: 100%;
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+    
+    .footer-col:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Adjust floating buttons */
+    .floating-button_whatapp,
+    .floating-call-button,
+    .floating-button {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .floating-call-button {
+        bottom: 90px;
+    }
+    
+    /* Email modal adjustments */
+    .modal-content {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+    
+    form input,
+    form textarea {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Additional responsive breakpoints */
+@media screen and (max-width: 480px) {
+    /* Further adjustments for smaller screens */
+    .logo img {
+        height: 50px;
+    }
+    
+    .nav-container {
+        padding: 5px 10px;
+    }
+    
+    .mobile-menu {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .footer {
+        padding: 40px 0;
+    }
+    
+    .footer-col h4 {
+        margin-bottom: 20px;
+    }
+    
+    .social-links a {
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+    }
+    
+    /* Adjust floating buttons spacing */
+    .floating-button_whatapp {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .floating-call-button {
+        bottom: 80px;
+        right: 15px;
+    }
+    
+    .floating-button {
+        bottom: 15px;
+        left: 15px;
+    }
+}
+
+/* Ensure mobile menu transitions smoothly */
+.mobile-menu {
+    transition: right 0.3s ease-in-out;
+}
+
+/* Improve mobile menu visibility */
+.menu-toggle:checked ~ .mobile-menu {
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhance touch targets for mobile */
+.mobile-menu a {
+    padding: 15px;
+    margin: 5px 0;
+}
 
 
     </style>
@@ -426,7 +665,7 @@ button:hover {
             <div class="nav-links">
               <a href="{% url 'index' %}" class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}">Home</a>
               <a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a>
-              <a href="{% url 'property' %}" class="{% if request.resolver_match.url_name == 'property' %}active{% endif %}">Rooms</a>
+              <a href="{% url 'property' %}" class="{% if request.resolver_match.url_name == 'property' %}active{% endif %}">Property</a>
               <a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
           </div>
           
@@ -444,6 +683,24 @@ button:hover {
             </div>
         </div>
     </nav>
+
+
+<!-- Add this HTML right after your <body> tag -->
+  <div class="mobile-menu-wrapper">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-button">
+        <span class="menu-icon"></span>
+    </label>
+    
+    <nav class="mobile-menu">
+        <ul>
+            <li><a href="{% url 'index' %}">HOME</a></li>
+            <li><a href="{% url 'about' %}">ABOUT</a></li>
+            <li><a href="{% url 'property' %}">ROOMS</a></li>
+            <li><a href="{% url 'contact' %}">CONTACT</a></li>
+        </ul>
+    </nav>
+</div>
 
 
     <div class="floating-button_whatapp" onclick="openWhatsApp()">
@@ -568,6 +825,29 @@ document.getElementById("emailForm").addEventListener("submit", function (e) {
     // Reset form and close modal
     document.getElementById("emailForm").reset();
     closeEmailForm();
+});
+
+
+// mobile menu
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileNav = document.querySelector('.mobile-nav');
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const mobileMenu = document.querySelector('.mobile-nav-menu');
+
+    mobileNavToggle.addEventListener('click', function() {
+        mobileNav.classList.toggle('active');
+        if (mobileNav.classList.contains('active')) {
+            mobileMenu.style.display = 'block';
+            setTimeout(() => {
+                mobileMenu.style.transform = 'translateX(0)';
+            }, 10);
+        } else {
+            mobileMenu.style.transform = 'translateX(100%)';
+            setTimeout(() => {
+                mobileMenu.style.display = 'none';
+            }, 300);
+        }
+    });
 });
 
 </script>

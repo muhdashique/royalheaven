@@ -2,215 +2,499 @@
 {% load static %}
 {% block content %}
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Royal Heaven</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
     <style>
-        body{
-            background-color: #000000;
+        body {
+            background-color: #010101;
+            color: #e5ba37;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        .journey-section {
-  background-color: #ffffff;
-  padding: 80px 0;
+
+        /* Unique Journey Section */
+        .unique-journey {
+            background: url('https://images.pexels.com/photos/5839276/pexels-photo-5839276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #e5ba37;
+        }
+
+        .unique-journey .content {
+            font-size: 4rem;
+            font-weight: 900;
+        }
+
+        /* Mission Section */
+     /* Mission Section */
+     .mission-section {
+            background-color: #1e1e1e;
+            padding: 4rem 2rem;
+            color: #f3f4f6;
+        }
+
+        .mission-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .mission-text {
+            text-align: justify;
+        }
+
+        .mission-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #e5ba37;
+        }
+
+        .mission-text p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .mission-image img {
+            width: 900px;
+            max-width: 700px;
+            height: 500px;
+            border-radius: 16px;
+            border: 4px solid #e5ba37;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+
+        /* Video Section */
+        /* .video-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 20px;
+            border: 2px solid #e5ba37;
+            border-radius: 8px;
+            background-color: #111;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-container h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .video-container video {
+            width: 100%;
+            border: 2px solid #e5ba37;
+            border-radius: 8px;
+         }
+
+        .video-container .controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }  */
+
+        /* .video-container button {
+            background-color: #e5ba37;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        } */
+
+        /* .video-container button:hover {
+            background-color: #d4a62d;
+        } */
+
+        @media (max-width: 768px) {
+            .mission-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .mission-image img {
+                margin: 0 auto;
+            }
+
+            .unique-journey .content {
+                font-size: 2.5rem;
+            }
+        }
+        /* Add these additional styles at the end of your existing style section */
+@media screen and (max-width: 480px) {
+    /* Overall Page Adjustments */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Refined Unique Journey Section */
+    .unique-journey {
+        min-height: 50vh;
+        background-position: center;
+        position: relative;
+    }
+    .unique-journey::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 1; /* Ensure the overlay stays on top of the background */
 }
 
-.journey-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    /* .unique-journey::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4);
+    } */
+
+    .unique-journey .content {
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+    }
+
+    .unique-journey .content h2 {
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        letter-spacing: 2px;
+    }
+
+    /* Enhanced Mission Section */
+    .mission-section {
+        padding: 40px 15px;
+    }
+
+    .mission-content {
+        gap: 30px;
+    }
+
+    .mission-text {
+        text-align: left;
+        padding: 0 10px;
+    }
+
+    .mission-text h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .mission-text p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .mission-image {
+        order: -1;
+        margin: 50px;
+        max-width: 100%;
+        padding: 0 15px;
+        height: 50vh;
+    }
+
+    .mission-image img {
+        width: 100%;
+        height: 50vh;
+        max-height: 50px;
+        object-fit: cover;
+    }
+
+    /* Improved Video Section */
+    /* .video-container {
+        margin: 30px 15px;
+        padding: 15px;
+        border-width: 1px;
+    }
+
+    .video-container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .video-container video {
+        border-width: 1px;
+    }
+
+    .video-container .controls {
+        padding: 10px 0;
+    }
+
+    .video-container button {
+        flex: 1;
+        min-width: 80px;
+        margin: 0 5px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .video-container p {
+        margin-top: 15px;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    } */
 }
 
-.journey-image {
-  flex: 0 0 60%;
-  padding-right: 40px;
+/* Tablet Optimization */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .mission-section {
+        padding: 60px 20px;
+    }
+
+    .mission-image {
+        order: -1;
+        margin-bottom: 20px;
+    }
+
+    .video-container {
+        width: 90%;
+        max-width: 600px;
+    }
 }
 
-.journey-image img {
-  width: 100%;
-  height: 90vh;
-  border-radius: 8px;
+/* Landscape Mode Refinements */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .unique-journey {
+        min-height: 100vh;
+    }
+
+    .unique-journey .content h2 {
+        font-size: 2rem;
+    }
+
+    .mission-section {
+        padding: 30px 15px;
+    }
+
+    .video-container {
+        margin: 20px auto;
+    }
 }
 
-.journey-text {
-  flex: 0 0 40%;
+/* Touch Device Optimization */
+@media (hover: none) {
+    .video-container button {
+        padding: 12px 20px;
+    }
+
+    .video-container button:active {
+        background-color: #d4a62d;
+        transform: scale(0.98);
+    }
 }
 
-.journey-text h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 20px;
+/* High-DPI Screen Adjustments */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .unique-journey {
+        background-size: cover;
+    }
+
+    .mission-text p {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 }
 
-.journey-text p {
-  font-size: 18px;
-  color: #666;
-  margin-bottom: 0;
-}
-
-@media (max-width: 768px) {
-  .journey-content {
-    flex-direction: column;
-  }
-
-  .journey-image {
-    flex: 0 0 100%;
-    padding-right: 0;
-    margin-bottom: 40px;
-  }
-
-  .journey-text {
-    flex: 0 0 100%;
-    text-align: center;
-  }
-}
-.unique-journey {
-  background: url('https://images.pexels.com/photos/5839276/pexels-photo-5839276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center/cover;
-  height: 800px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: rgb(255, 254, 254);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.unique-journey .content {
-  max-width: 400px;
-  font-size: xx-large;
- 
-}
-
-.unique-journey h2 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.unique-journey p {
-  font-size: 16px;
-}
-/* video */
+/*  */
 .video-container {
-    max-width: 1400px; /* Increase the container's max-width */
-    margin: 0 auto;
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-}
-video {
-    width: 140%; /* Increase the video width */
-    max-width: 100%; /* Ensure it doesn't exceed the container */
-    height: auto; /* Maintain aspect ratio */
-}
-        .video-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-  }
-  video {
     width: 100%;
-    height: auto;
-  }
-  /* about section */
-  .mission-section {
-  background-color: #000000;
-  padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.mission-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
 }
 
-.mission-text {
-  color: #fff;
+.video-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.mission-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
 }
 
-.mission-text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.play-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
-.mission-image img {
-  width: 70vh;
-  height: 70vh;
-  border-radius: 50%;
+.play-button {
+    width: 72px;
+    height: 72px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.learn-more-btn {
-  display: inline-block;
-  background-color: #fff;
-  color: #040404;
-  text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: bold;
-  margin-top: 1.5rem;
-  transition: background-color 0.3s, color 0.3s;
+.play-button:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.35);
 }
 
-.learn-more-btn:hover {
-  background-color: #000000;
-  color: #fff;
+.play-icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 4px; /* Slight offset for visual balance */
 }
 
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .play-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const video = document.querySelector(".video-container video");
+            const playBtn = document.getElementById("playBtn");
+            const pauseBtn = document.getElementById("pauseBtn");
+            const restartBtn = document.getElementById("restartBtn");
+
+            playBtn.addEventListener("click", () => {
+                video.play();
+            });
+
+            pauseBtn.addEventListener("click", () => {
+                video.pause();
+            });
+
+            restartBtn.addEventListener("click", () => {
+                video.currentTime = 0;
+                video.play();
+            });
+        });
+
+
+        // 
+        document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('myVideo');
+    const overlay = document.getElementById('playOverlay');
+    
+    // Play/Pause toggle
+    overlay.addEventListener('click', function() {
+        if (video.paused) {
+            video.play();
+            overlay.classList.add('hidden');
+        }
+    });
+
+    // Click video to pause
+    video.addEventListener('click', function() {
+        if (!video.paused) {
+            video.pause();
+            overlay.classList.remove('hidden');
+        }
+    });
+
+    // Show overlay when video ends
+    video.addEventListener('ended', function() {
+        overlay.classList.remove('hidden');
+    });
+});
+    </script>
 </head>
 <body>
-    <section class="unique-journey">
-        <div class="content" style="margin-right: 1000px; margin-top: 450px; font-size: xx-large;">
-          <h2 style="font-weight: 900;">ROYAL<br>HEAVEN</h2> 
+    <section class="h-screen relative">
+        <div class="absolute top-0 bottom-0 overflow-hidden right-0 left-0">
+            <img src="https://images.pexels.com/photos/5839276/pexels-photo-5839276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="w-full h-full object-cover">
+        </div>
+        <div class="content" style="margin-right: 900px;">
+            <!-- <h2>ROYAL<br>HEAVEN</h2> -->
         </div>
     </section>
 
-    <section class="mission-section">
-      <div class="mission-content">
-        <div class="mission-text">
-          <h2>Mission</h2>
-          <p> Royal Heaven, a serene homestay nestled in the heart of Wayanad, where nature's beauty meets warm hospitality. Surrounded by lush greenery and a tranquil atmosphere, Royal Heaven offers the perfect getaway for those seeking peace and relaxation. Whether you’re here to enjoy the misty mornings, explore the enchanting landscapes, or simply unwind in the lap of nature, Royal Heaven promises a memorable and rejuvenating experience. Come, make yourself at home in the beauty of Wayanad!
-
-            .</p>
+    <section class="mission-section" style="margin-bottom: 10px;">
+        <div class="mission-content">
+            <div class="mission-text">
+                <h2>ROYAL HEAVEN</h2>
+                <p>Royal Heaven, a serene homestay nestled in the heart of Wayanad, where nature's beauty meets warm hospitality. Surrounded by lush greenery and a tranquil atmosphere, Royal Heaven offers the perfect getaway for those seeking peace and relaxation. Whether you’re here to enjoy the misty mornings, explore the enchanting landscapes, or simply unwind in the lap of nature, Royal Heaven promises a memorable and rejuvenating experience. Come, make yourself at home in the beauty of Wayanad!</p>
+            </div>
+            <div class="mission-image">
+                <img src="{% static 'D:\IMC project\Royal Heaven\royalheaven\static\images\IMG_1961.JPG' %}" alt="Nature">
+            </div>
         </div>
-        <div class="mission-image">
-          <img src="https://images.pexels.com/photos/30349077/pexels-photo-30349077/free-photo-of-bosphorus-bridge-over-scenic-istanbul-waterway.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Hikers on a trail">
-        </div>
-        <!-- <a href="#" class="learn-more-btn">LEARN MORE</a> -->
-      </div>
     </section>
 
-
-    <section class="video-container">
-      <h2>Video Title</h2>
-      <video controls>
-          <source src="{% static 'images/I MINUTS NEW.mp4' %}" type="video/mp4">
-          Your browser does not support the video tag.
-      </video>
-      <p>Video description or additional information</p>
-  </section>
-  
-
-    
-
-
-      
+   <section style="margin-bottom: 10px;">
+    <div class="video-container">
+        <div class="video-wrapper">
+            <video id="myVideo" class="video-element">
+                <!-- Replace with your video source -->
+                <source src="{% static 'images/I MINUTS NEW.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <!-- Frosted glass play button overlay -->
+            <div class="play-overlay" id="playOverlay">
+                <button class="play-button">
+                    <svg class="play-icon" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+   </section>
 </body>
 </html>
 {% endblock %}
