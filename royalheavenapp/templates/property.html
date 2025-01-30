@@ -220,6 +220,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+           
         }
 
         .content {
@@ -479,12 +480,6 @@ h1 {
         font-size: 1.5rem;
     }
 
-    /* Image preview adjustments */
-    #previewImage {
-        max-width: 95%;
-        max-height: 80vh;
-        margin-top: 10vh;
-    }
 
     #closePreview {
         top: 5px;
@@ -752,12 +747,15 @@ h1 {
     </div>
 
     <!-- Image Preview Section -->
-    <div id="imagePreviewOverlay" style="display:none;align-items: center;">
-        <div id="imagePreview" style="text-align: center; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.8); z-index: 9999; display: none;">
-            <img id="previewImage" src="" alt="Preview Image" style="max-width: 90%; max-height: 90%; margin-top: 5%; background: white;">
-            <button id="closePreview" style="position: absolute; top: 10px; right: 10px; padding: 10px; background: rgba(0, 0, 0, 0.7); color: white; border: none; font-size: 18px; cursor: pointer;">&times; Close</button>
+    
+        <div id="imagePreviewOverlay"  class="fixed top-0 bottom-0 w-full h-screen flex justify-center items-center z-[2100] backdrop-blur-xl bg-[#000]" style="display: none;">
+            <div id="imagePreview" class="w-full h-screen">
+                <img id="previewImage" src="" alt="Preview Image" class="w-full h-full object-contain">
+            </div>
+            <div class="absolute top-5 absolute w-[40px] h-[40px] bg-[#e7e4e4] rounded-full right-10">
+                <button id="closePreview" class=" ">&times;</button>
+            </div>
         </div>
-    </div>
 </section>
 
 
