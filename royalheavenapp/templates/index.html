@@ -12,10 +12,10 @@
     <title>ROYAL HEAVEN</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
-        Reset default styles * {
+         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -755,7 +755,8 @@
                         unwind in the lap of nature, Royal Heaven promises a memorable and rejuvenating experience.
 
                         Come, make yourself at home in the beauty of Wayanad!</p>
-                    <a href="{% url 'about' %}" class="learn-more-btn">LEARN MORE</a>
+                        <a href="{% url 'about' %}" class="learn-more-btn" onclick="handleLearnMoreClick(event);">LEARN MORE</a>
+
                 </div>
             </div>
         </div>
@@ -767,25 +768,25 @@
         <div class="gallery-container">
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="{% static 'images\IMG_1963.JPG' %}" alt="Photographer with camera in low light" />
+                  <a href="{% url 'property' %}#property"><img src="{% static 'images\WhatsApp Image 2025-01-27 at 10.34.38_f1befacf.jpg' %}" alt="Photographer with camera in low light" /></a>
                 </div>
                 <div class="gallery-item featured-vertical">
-                    <img src="{% static 'images\villa1.JPG' %}" alt="Photographer portrait" />
+                    <a href="{% url 'property' %}#property"><img src="{% static 'images\villa1.JPG' %}" alt="Photographer portrait" /></a>
                 </div>
                 <div class="gallery-item">
-                    <img src="{% static 'images/pool.png' %}" alt="Sunset silhouette" />
+                    <a href="{% url 'property' %}#property"><img src="{% static 'images/pool.png' %}" alt="Sunset silhouette" /></a>
                 </div>
                 <div class="gallery-item">
-                    <img src="{% static 'images/out.png' %}" alt="Photographer on rock" />
+                    <a href="{% url 'property' %}#property"><img src="{% static 'images/out.png' %}" alt="Photographer on rock" /></a>
                 </div>
                 <div class="gallery-item featured-horizontal">
-                    <img src="{% static 'images/Screenshot 2025-01-25 at 9.20.28 PM.png' %}" alt="Camera close-up" />
+                    <a href="{% url 'property' %}#property"><img src="{% static 'images/Screenshot 2025-01-25 at 9.20.28 PM.png' %}" alt="Camera close-up" /></a>
                 </div>
                 <div class="gallery-item">
-                    <img src="{% static 'images/out.png' %}" alt="Street photographer" />
+                    <a href="{% url 'property' %}#property"><img src="{% static 'images\prop3.png' %}" alt="Street photographer" /></a>
                 </div>
                 <div class="gallery-item">
-                    <img src="{% static 'images/poolside.jpg' %}" alt="Silhouette at sunset" />
+                    <a href="{% url 'property' %}#property">><img src="{% static 'images/poolside.jpg' %}" alt="Silhouette at sunset" /></a>
                 </div>
             </div>
         </div>
@@ -1099,33 +1100,69 @@
                 <div class="testimonial-text">
                     I had an amazing stay at Royal Heaven Homestay! The location is peaceful, surrounded by breathtaking views, and the hospitality was outstanding. The rooms were clean and cozy, and the home-cooked meals were absolutely delicious.
                 </div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM88oGZ1xcAoEmTLvWyrpb81xhFy1YWBAgYH1ufoAQsamx-m9tGfVZeTy3-MxpnZGb9Oc&usqp=CAU"
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
                     alt="Mike Angels" class="profile-img">
-                <h3 class="profile-name">MIKE ANGELS</h3>
-                <!-- <p class="profile-title">Architect</p> -->
+                <h3 class="profile-name">Akshay Krishna</h3>
+                <p class="profile-title">Thrissur</p>
             </div>
 
             <div class="testimonial-card">
                 <div class="testimonial-text">
                     Royal Heaven Homestay exceeded all my expectations. The hosts were incredibly warm and welcoming, making sure we had everything we needed. The serene environment, comfortable rooms, and delicious local food made our stay truly special.
                 </div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHDRlp-KGr_M94k_oor4Odjn2UzbAS7n1YoA&s"
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
                     alt="Carl Oswal" class="profile-img">
-                <h3 class="profile-name">CARL OSWAL</h3>
-                <!-- <p class="profile-title">Builder</p> -->
+                <h3 class="profile-name">Albin</h3>
+                <p class="profile-title">Palakkad</p>
             </div>
 
             <div class="testimonial-card">
                 <div class="testimonial-text">
                     If you’re looking for a peaceful retreat, this is the perfect place. The homestay is well-maintained, with stunning views and a relaxing atmosphere. The staff went above and beyond to ensure a great experienceWaking up to the sounds of nature 
                 </div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6kArwXo7RAjAxTYAIYQaFu2URfFaO1fYgsg&s"
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
                     alt="Mark Smith" class="profile-img">
-                <h3 class="profile-name">Dua Lipa</h3>
-                <!-- <p class="profile-title">Constructor</p> -->
+                <h3 class="profile-name">Aswin Santhosh</h3>
+                <p class="profile-title">Calicut</p>
             </div>
         </div>
     </section>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle video loading only when needed
+            const bannerVideo = document.querySelector('.banner-video');
+            if (bannerVideo) {
+                bannerVideo.src = "{% static 'images/royalbanner.mp4' %}";
+            }
+            
+            // Handle navigation links
+            const navigationLinks = document.querySelectorAll('a[href]');
+            navigationLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Don't prevent default for external links or links with specific behavior
+                    if (!this.getAttribute('href').startsWith('#')) {
+                        return true;
+                    }
+                    e.preventDefault();
+                    // Handle anchor navigation here if needed
+                });
+            });
+        });
+        </script>
+
+<script>
+    function handleLearnMoreClick(event) {
+      // Add custom logic here (e.g., logging, analytics)
+      console.log("Learn More link clicked");
+  
+      // Optionally prevent default behavior if needed
+      // event.preventDefault();
+  
+      // Navigate to the about page
+      window.location.href = "{% url 'about' %}";
+    }
+  </script>
+</body>
 </html>
 {% endblock %}

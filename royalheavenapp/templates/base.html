@@ -289,6 +289,7 @@ ul{
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
       cursor: pointer;
       transition: transform 0.3s;
+      z-index: 200;
     }
 
     .floating-button:hover {
@@ -311,6 +312,7 @@ ul{
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       cursor: pointer;
       text-decoration: none;
+      z-index: 200;
     }
 
     .floating-call-button i {
@@ -338,7 +340,7 @@ ul{
     align-items: center;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+    z-index: 200;
 }
 
 /* Modal Styles */
@@ -702,7 +704,7 @@ button:hover {
         <ul>
             <li><a href="{% url 'index' %}">HOME</a></li>
             <li><a href="{% url 'about' %}">ABOUT</a></li>
-            <li><a href="{% url 'property' %}">ROOMS</a></li>
+            <li><a href="{% url 'property' %}">PROPERTY</a></li>
             <li><a href="{% url 'contact' %}">CONTACT</a></li>
         </ul>
     </nav>
