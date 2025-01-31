@@ -721,24 +721,15 @@
 </head>
 
 <body>
-    <div class="banner-container relative">
-        <!-- <div class="absolute top-0 bottom-0 left-0 right-0 z-20">
-            <img src="{% static 'images/blackshade.png' %}" class="w-full h-full object-cover opacity-50" alt="">
-        </div> -->
+    <div class="h-screen relative w-full">
         <!-- Video Background -->
-        <video class="banner-video" autoplay loop muted playsinline>
-            <source src="{% static 'images/royalbanner.mp4' %}" type="video/mp4">
+        <video class="absolute top-0 bottom-0 left-0 right-0 w-full h-full object-cover" autoplay loop muted playsinline>
+            <source src="{% static 'images/royalbannervideo.mp4' %}" type="video/mp4">
         </video>
-
-        <!-- Overlay -->
-        <div class="overlay"></div>
-        <!-- Banner Text -->
-        <!-- <div class="banner-text">
-            <h1>ROYAL <br> HEAVEN</h1>
-        </div> -->
     </div>
+
     <section class="hiking-section">
-        <img src="{% static 'D:\IMC project\Royal Heaven\royalheaven\static\images\prop4.png' %}"
+        <img src="{% static 'images\prop4.png' %}"
             alt="Hikers on mountain trail" class="hiking-image">
             <div class="absolute top-0 bottom-0 left-0 right-0 z-20">
             <img src="{% static 'images/blackshade.png' %}" class="w-full h-full object-cover opacity-50" alt="">
